@@ -1,7 +1,9 @@
 require_relative("../models/coral.rb")
 require_relative("../models/reef.rb")
+require_relative("../models/restoration.rb")
 require("pry-byebug")
 
+Restoration.delete_all()
 Coral.delete_all()
 Reef.delete_all()
 
@@ -23,6 +25,16 @@ reef3 = Reef.new({"name" => "Tubbataha", "location" => "Indonesia"})
 reef3.save()
 reef4 = Reef.new({"name" => "Molasses", "location" => "USA - Florida"})
 reef4.save()
+
+
+restoration1 = Restoration.new({"coral_id" => coral1.id, "reef_id" => reef1.id})
+restoration1.save()
+restoration2 = Restoration.new({"coral_id" => coral2.id, "reef_id" => reef2.id})
+restoration2.save()
+restoration3 = Restoration.new({"coral_id" => coral3.id, "reef_id" => reef3.id})
+restoration3.save()
+restoration4 = Restoration.new({"coral_id" => coral4.id, "reef_id" => reef4.id})
+restoration4.save()
 
 
 

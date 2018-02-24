@@ -5,7 +5,7 @@ class Reef
   attr_reader(:id, :name ,:location )
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @location = options['location']
   end
@@ -23,6 +23,15 @@ class Reef
     @id = results['id'].to_i
   end
 
+  def corals
+    sql = "SELECT c.* FROM corals c
+    INNER JOIN restorations
+    ON restorations.coral_id = c.id
+    WHERE restorations.reef_id = $1; "
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map{|coral| Coral.new(coral) }
+  end
 
   def Reef.all
     sql = "SELECT * FROM reefs"

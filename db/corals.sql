@@ -17,7 +17,7 @@ CREATE TABLE corals(
 );
 
 
-CREATE TABLE restoration(
+CREATE TABLE restorations(
   id SERIAL8 PRIMARY KEY,
   reef_id INT8 REFERENCES reefs(id),
   coral_id INT8 REFERENCES corals(id)
