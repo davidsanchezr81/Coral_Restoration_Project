@@ -26,7 +26,8 @@ coral3 = Coral.new({"species" => "Euphyllia", "name" => "Blue Hammer Head", "pla
 coral3.save()
 coral4 = Coral.new({"species" => "Sarconphyton", "name" => "Todstool", "plantdate" => "2012-11-14", "reef_id" => reef4.id})
 coral4.save()
-
+coral5 = Coral.new({"species" => "Another Sarconphyton", "name" => "Todstool", "plantdate" => "2012-11-15", "reef_id" => reef4.id})
+coral5.save()
 
 
 

@@ -42,6 +42,8 @@ class Coral
     return results.map {|coral| Coral.new(coral)}
   end
 
+
+
   def Coral.delete_all
     sql = "DELETE FROM corals"
     results = SqlRunner.run(sql)
