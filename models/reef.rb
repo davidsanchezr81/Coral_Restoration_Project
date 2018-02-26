@@ -2,7 +2,8 @@ require_relative("../db/sql_runner.rb")
 
 class Reef
 
-  attr_reader(:id, :name ,:location )
+  attr_accessor(:name, :location )
+  attr_reader(:id)
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -35,6 +36,7 @@ class Reef
 
   def Reef.all
     sql = "SELECT * FROM reefs"
+    value = []
     results = SqlRunner.run(sql)
     return results.map {|reef| Reef.new(reef)}
   end

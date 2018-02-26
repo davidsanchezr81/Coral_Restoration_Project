@@ -1,6 +1,7 @@
-DROP TABLE restoration;
-DROP TABLE reefs;
+-- DROP TABLE restorations;
+
 DROP TABLE corals;
+DROP TABLE reefs;
 
 
 
@@ -13,12 +14,7 @@ CREATE TABLE reefs(
 CREATE TABLE corals(
   id SERIAL8 PRIMARY KEY,
   species VARCHAR(255) NOT NULL,
-  name VARCHAR(255) NOT NULL
-);
-
-
-CREATE TABLE restorations(
-  id SERIAL8 PRIMARY KEY,
-  reef_id INT8 REFERENCES reefs(id),
-  coral_id INT8 REFERENCES corals(id)
+  name VARCHAR(255) NOT NULL,
+  plantdate VARCHAR(255)NOT NULL,
+  reef_id INT8 REFERENCES reefs(id)
 );

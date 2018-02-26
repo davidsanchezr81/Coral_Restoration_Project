@@ -2,23 +2,25 @@ require_relative("../db/sql_runner.rb")
 
 class Coral
 
-  attr_reader(:id, :species ,:name )
+  attr_reader(:id, :species ,:name, :plant_date )
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @species = options['species']
     @name = options['name']
+    @plant_date = options['plantdate']
   end
 
   def save()
     sql = "INSERT INTO corals
     ( species,
-      name
+      name,
+      plantdate
     )
     VALUES
-    ($1,$2)
+    ($1,$2, $3)
     RETURNING id"
-    values = [@species, @name]
+    values = [@species, @name, @plant_date]
     results =SqlRunner.run(sql, values).first
     @id = results['id'].to_i
   end
