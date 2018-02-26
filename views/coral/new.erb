@@ -1,0 +1,28 @@
+<h1>New corals</h1>
+<form method="post" action="/coral/new">
+
+  <label for="coral-species">Coral Species: </label>
+  <input id="coral-species" type="text" name="species"/>
+
+  <label for="coral-name">Coral Name: ></label>
+  <input id="coral-name" type="text" name="name"/>
+
+
+  <label for="coral-select">Select a Reef: ></label>
+  <select id="coral-select"  name="reef_id">
+    <% for reef in @reefs %>
+      <option value="<%= reef.id %>"> <%= reef.name %> </option>
+    <% end %>
+    <!-- <option value="Coral Farm">Coral Farm</option>
+    <option value="Ningaloo">Ningaloo</option>
+    <option value="Koh Ma">Koh Ma</option>
+    <option value="Tubbataha">Tubbataha</option>
+    <option value="Molasses">Molasses</option> -->
+  </select>
+
+  <label for="plant-date">Plant Date: ></label>
+  <input id="plant-date" type="date" name="plantdate" />
+
+  <input type="submit"  value="Transfer coral"/>
+
+</form>

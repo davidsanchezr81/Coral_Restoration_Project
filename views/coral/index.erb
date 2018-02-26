@@ -4,6 +4,7 @@
 <p>Species: <%= coral.species() %></p>
 <p>Name: <%= coral.name() %></p>
 <p>Plant date: <%= coral.plant_date() %></p>
+<p>Reef: <%=Reef.find_by_id(coral.reef_id()).name %></p>
 
 </p>
 <hr/>

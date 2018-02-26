@@ -24,15 +24,15 @@ class Reef
     @id = results['id'].to_i
   end
 
-  def corals
-    sql = "SELECT c.* FROM corals c
-    INNER JOIN restorations
-    ON restorations.coral_id = c.id
-    WHERE restorations.reef_id = $1; "
-    values = [@id]
-    results = SqlRunner.run(sql, values)
-    return results.map{|coral| Coral.new(coral) }
-  end
+  # def corals
+  #   sql = "SELECT c.* FROM corals c
+  #   INNER JOIN restorations
+  #   ON restorations.coral_id = c.id
+  #   WHERE restorations.reef_id = $1; "
+  #   values = [@id]
+  #   results = SqlRunner.run(sql, values)
+  #   return results.map{|coral| Coral.new(coral) }
+  # end
 
   def Reef.all
     sql = "SELECT * FROM reefs"
@@ -40,6 +40,15 @@ class Reef
     results = SqlRunner.run(sql)
     return results.map {|reef| Reef.new(reef)}
   end
+
+  def Reef.find_by_id(id)
+    sql = "SELECT * FROM reefs where id = '#{id}'"
+    value = []
+    result = SqlRunner.run(sql).first
+    return Reef.new(result)
+  end
+
+
 
   def Reef.delete_all
     sql = "DELETE FROM reefs"

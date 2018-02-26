@@ -1,9 +1,5 @@
--- DROP TABLE restorations;
-
 DROP TABLE corals;
 DROP TABLE reefs;
-
-
 
 CREATE TABLE reefs(
   id SERIAL8 PRIMARY KEY,
