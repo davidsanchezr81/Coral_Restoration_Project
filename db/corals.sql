@@ -12,5 +12,6 @@ CREATE TABLE corals(
   species VARCHAR(255) NOT NULL,
   name VARCHAR(255) NOT NULL,
   plantdate VARCHAR(255)NOT NULL,
+  status VARCHAR(255)NOT NULL,
   reef_id INT8 REFERENCES reefs(id)
 );

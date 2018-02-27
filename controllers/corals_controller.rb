@@ -16,5 +16,22 @@ end
 post '/coral/new' do
   @corals = Coral.new( params )
   @corals.save()
+  redirect to '/'
+end
+
+
+#------------------------ not working the update
+get '/coral/:id' do
+  @coral = Coral.find( params['id'] )
+  erb :"coral/edit"
+end
+
+get '/coral/:id/edit' do
+  @coral = Coral.find( params['id'] )
+  erb :"coral/edit"
+end
+
+post '/coral/:id' do # updating corals information
+  Coral.new( params ).update
   redirect to '/coral'
 end

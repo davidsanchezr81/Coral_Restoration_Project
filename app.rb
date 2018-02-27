@@ -6,5 +6,5 @@ require_relative('./controllers/corals_controller.rb')
 
 
 get '/' do
-erb(:index)
+ erb(:index)
 end

@@ -6,6 +6,9 @@
 <p>Plant date: <%= coral.plant_date() %></p>
 <p>Reef: <%=Reef.find_by_id(coral.reef_id()).name %></p>
 
+<p>Coral Status: <a href="/coral/<%= coral.id %>"> <%= coral.status() %></a></p>
+<p>
+
 </p>
 <hr/>
 <% end %>

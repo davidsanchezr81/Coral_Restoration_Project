@@ -1,0 +1,34 @@
+<form method="post" action="/coral/<%= @coral.id%>">
+<label for "species"> Coral Species:</label>
+<input
+type="text"
+name="species"
+id="species"
+value="<%= @coral.species %>" />
+
+
+<label for="name"> Coral Name </label>
+<input
+type="text"
+name="name"
+id="name"
+value="<%= @coral.name %>" />
+
+<label for="plantdate"> Plant date </label>
+<input
+type="text"
+name="plantdate"
+id="plantdate"
+value="<%= @coral.plant_date %>" />
+
+<label for="status-selection"> Update Coral Status </label>
+<select name="status" id="status-selection">
+<option
+<%="selected" if @coral.status == "Mature" %> value="Mature"> Mature </option>
+<option
+<%="selected" if @coral.status == "Growing" %> value="Growing"> Growing </option>
+</select>
+
+
+<input type='submit' value=" Edit Coral Information">
+</form>

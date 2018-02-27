@@ -1,5 +1,5 @@
-<h1>Plant a Coral</h1>
-<form method="post" action="/coral/new">
+<h1>Transfer Corals in the Reef</h1>
+<form method="post" action="/reef/new">
 
   <label for="coral-species">Coral Species: </label>
   <input id="coral-species" type="text" name="species"/>
@@ -8,18 +8,19 @@
   <input id="coral-name" type="text" name="name"/>
 
 
-  <label hidden for="coral-select">Select a Reef: ></label>
-  <select hidden id="coral-select"  name="reef_id">
+  <label for="coral-select">Select a Reef: ></label>
+  <select id="coral-select"  name="reef_id">
     <% for reef in @reefs %>
-      <option value="<%= reef.id %>" <%= "selected" if reef.name == "Coral Farm" %>> <%= reef.name %> </option>
+      <option value="<%= reef.id %>"> <%= reef.name %> </option>
     <% end %>
   </select>
 
   <label for="plant-date">Plant Date: ></label>
   <input id="plant-date" type="date" name="plantdate" />
 
-  <label hidden for="status-selection">Select a Coral Status:</label>
-    <select hidden name="status" id="status-selection">
+  <label for="status-selection">Select a Coral Status:</label>
+    <select name="status" id="status-selection">
+      <option value="Mature"> Mature </option>
       <option value="Growing"> Growing </option>
   </select>
 
