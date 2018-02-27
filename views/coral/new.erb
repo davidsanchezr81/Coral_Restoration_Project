@@ -1,11 +1,25 @@
 <h1>Plant a Coral</h1>
 <form method="post" action="/coral/new">
 
-  <label for="coral-species">Coral Species: </label>
-  <input id="coral-species" type="text" name="species"/>
+  <label for="species-selection">Coral Species: </label>
+  <select name="species" id="species-selection">
+    <option value="Sarconphyton Sp."> Sarconphyton Sp. </option>
+    <option value="Lobophytum Sp."> Lobophytum Sp. </option>
+    <option value="Euphyllia Sp."> Euphyllia Sp. </option>
+    <option value="Catalaphyllia Sp."> Catalaphyllia Sp. </option>
+    <option value="Caulastrea Sp."> Caulastrea Sp. </option>
+    <option value="Tracyphyllia Sp."> Tracyphyllia Sp. </option>
+  </select>
 
-  <label for="coral-name">Coral Name: ></label>
-  <input id="coral-name" type="text" name="name"/>
+  <label for="coral-name-selection">Coral Name: ></label>
+  <select name="name" id="coral-name-selection">
+    <option value="Common Toadstoll Coral"> Common Toadstoll Coral</option>
+    <option value="Devil's Hand Coral"> Devil's Hand Coral </option>
+    <option value="Hammer Coral"> Hammer Coral</option>
+    <option value="Elegance Coral"> Elegance Coral </option>
+    <option value="Trumpet Coral"> Trumpet Coral</option>
+    <option value="Open Brain Coral"> Open Brain Coral </option>
+  </select>
 
 
   <label hidden for="coral-select">Select a Reef: ></label>

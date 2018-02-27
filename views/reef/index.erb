@@ -1,11 +1,16 @@
- <p>Reef</p>
+ <p>Coral Farm / Reefs</p>
 
-<% @reefs.each do |reef| %>
-<p>Name: <%= reef.name() %></p>
-<p>Location: <%= reef.location() %></p>
-<p><a href="/reef/<%= reef.id %>">Show Corals in Reef</a></p>
+<table>
+<tr>
+<th><% @reefs.each do |reef| %></th>
+<th>Name: <%= reef.name() %> </th>
+<th>Location: <%= reef.location() %> </th>
+<th>><a href="/reef/<%= reef.id %>">Show Corals in Reef</a> </th>
+</tr>
+
 <p>
 
+
 </p>
-<hr/>
+
 <% end %>

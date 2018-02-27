@@ -36,9 +36,10 @@ post '/coral/:id' do # updating corals information
   redirect to '/coral'
 end
 
-#------------
+#-
 post '/coral/:id/delete' do # delete
   coral = Coral.find( params[:id] )
   coral.delete()
   redirect to '/coral'
 end
+## COMO MANDAR UN MENSAJE DESPUES DE REMOVER EL CORAL?????(remove.erb)
