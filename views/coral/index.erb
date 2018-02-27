@@ -7,6 +7,9 @@
 <p>Reef: <%=Reef.find_by_id(coral.reef_id()).name %></p>
 
 <p>Coral Status: <a href="/coral/<%= coral.id %>"> <%= coral.status() %></a></p>
+<form method="post" action="/coral/<%= coral.id %>/delete">
+  <input type="submit" value="Remove Coral"/>
+</form>
 <p>
 
 </p>

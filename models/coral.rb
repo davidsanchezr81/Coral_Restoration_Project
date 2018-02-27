@@ -55,6 +55,13 @@ class Coral
       SqlRunner.run( sql, values )
     end
 
+    def delete()
+      sql = "DELETE FROM corals
+      WHERE id = $1"
+      values = [@id]
+      SqlRunner.run( sql, values )
+    end
+
     def Coral.find(id)
       sql = "SELECT * FROM corals WHERE id = '#{id}'"
       result = SqlRunner.run(sql).first

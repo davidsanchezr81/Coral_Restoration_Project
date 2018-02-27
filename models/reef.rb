@@ -31,6 +31,13 @@ class Reef
     return results.map{|coral| Coral.new(coral) }
   end
 
+  def delete()
+    sql = "DELETE FROM reefs
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run( sql, values )
+  end
+
   def Reef.all
     sql = "SELECT * FROM reefs"
     value = []

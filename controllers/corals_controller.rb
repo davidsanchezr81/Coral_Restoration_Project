@@ -26,12 +26,19 @@ get '/coral/:id' do
   erb :"coral/edit"
 end
 
-get '/coral/:id/edit' do
-  @coral = Coral.find( params['id'] )
-  erb :"coral/edit"
-end
+# #get '/coral/:id/edit' do
+#   @coral = Coral.find( params['id'] )
+#   erb :"coral/edit"
+# end
 
 post '/coral/:id' do # updating corals information
   Coral.new( params ).update
+  redirect to '/coral'
+end
+
+#------------
+post '/coral/:id/delete' do # delete
+  coral = Coral.find( params[:id] )
+  coral.delete()
   redirect to '/coral'
 end
