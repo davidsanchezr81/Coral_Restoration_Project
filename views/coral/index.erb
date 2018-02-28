@@ -1,24 +1,39 @@
- <p>Corals</p>
+ <h2>Corals</h2>
 
 <p> <a  href="/coral/status/Mature"> Find Corals by Mature Status </a>
 </p>
 <p>
  <a  href="/coral/status/Growing"> Find Corals by Growing Status </a>
 </p>
+
+
+
+
+<table>
+<tr>
+<th>Species</th>
+<th>Name</th>
+<th>Plant date</th>
+<th>Coral status</th>
+<th>Reef</th>
+</tr>
 <% @corals.each do |coral| %>
-<p>Species: <%= coral.species() %></p>
-<p>Name: <%= coral.name() %></p>
-<p>Plant date: <%= coral.plant_date() %></p>
-<p>Coral Status:  <%= coral.status() %></a></p>
-<p>Reef: <%=Reef.find_by_id(coral.reef_id()).name %></p>
+<tr>
 
-<p><a href="/coral/<%= coral.id %>"> Edit Coral Information </a></p>
 
-<form method="post" action="/coral/<%= coral.id %>/delete">
+<td><%= coral.species() %></td>
+<td><%= coral.name() %></td>
+<td><%= coral.plant_date() %></td>
+<td><%= coral.status() %></a></td>
+<td><%=Reef.find_by_id(coral.reef_id()).name %></td>
+
+<td><a href="/coral/<%= coral.id %>"> Edit Coral Information </a></td>
+
+<td><form method="post" action="/coral/<%= coral.id %>/delete">
   <input type="submit" value="Remove Coral"/>
 </form>
-<p>
+</td>
+</tr>
 
-</p>
-<hr/>
 <% end %>
+</table>
