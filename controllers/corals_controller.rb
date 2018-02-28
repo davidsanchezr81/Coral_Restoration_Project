@@ -19,6 +19,11 @@ post '/coral/new' do
   redirect to '/'
 end
 
+get '/coral/status/:status' do
+  @reefs = Reef.all
+  @corals = Coral.find_by_status( params['status'] )
+  erb :"coral/status"
+end
 
 #------------------------ not working the update
 get '/coral/:id' do
@@ -26,11 +31,9 @@ get '/coral/:id' do
   erb :"coral/edit"
 end
 
-# #get '/coral/:id/edit' do
-#   @coral = Coral.find( params['id'] )
-#   erb :"coral/edit"
-# end
 
+
+##### --------- done -----
 post '/coral/:id' do # updating corals information
   Coral.new( params ).update
   redirect to '/coral'

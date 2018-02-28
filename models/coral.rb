@@ -68,6 +68,12 @@ class Coral
       return Coral.new(result)
     end
 
+    def Coral.find_by_status(status)
+      sql = "SELECT * FROM corals WHERE status = '#{status}'"
+      results = SqlRunner.run(sql)
+      return results.map {|coral| Coral.new(coral)}
+    end
+
 
     def Coral.all
       sql = "SELECT * FROM corals"
