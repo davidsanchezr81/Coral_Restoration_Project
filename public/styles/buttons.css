@@ -1,11 +1,11 @@
 
 .button{
-    background-color: #ffe0bd; 
+    background-color: #ffe0bd;
     border: none;
-    color: white;
+    color: black;
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: ;
     display: inline-block;
     font-size: 16px;
 }

@@ -1,16 +1,19 @@
 <table>
-  <caption> Coral Information  </caption>
-  <thead>
+  <h1> Coral Information  </h1>
+
     <tr>
       <th>Species</th>
       <th>Name</th>
       <th>Plant date</th>
       <th>Coral status</th>
       <th>Location</th>
+      <th>Edit</th>
+      <th>Remove Coral</th>
+
     </tr>
-  </thead>
+
   <% @corals.each do |coral| %>
-  <tbody>
+
 
     <tr>
       <td><%= coral.species() %></td>
@@ -27,5 +30,5 @@
 
     <% end %>
 
-  </tbody>
+
 </table>

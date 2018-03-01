@@ -4,12 +4,13 @@
   <tr>
     <th>Name</th>
     <th>Location</th>
+    <th>Corals in Location</th>
   </tr>
   <% @reefs.each do |reef| %>
   <tr>
     <td><%= reef.name() %> </td>
     <td><%= reef.location() %> </td>
-    <td><a href="/reef/<%= reef.id %>"> Show Corals in Reef </a> </td>
+    <td><a href="/reef/<%= reef.id %>"> Show Corals</a> </td>
   </tr>
 
   <% end %>

@@ -1,11 +1,13 @@
  <h1>All the Corals</h1>
 
-<p> <a  href="/coral/status/Mature"> Find Corals by Mature Status </a>
-</p>
-<p>
- <a  href="/coral/status/Growing"> Find Corals by Growing Status </a>
-</p>
+<button><a  href="/coral/status/Mature"> Find Corals by Mature Status </a>
+</button>
 
+ <button><a  href="/coral/status/Growing"> Find Corals by Growing Status </a>
+</button>
+
+<br>
+</br>
 
 
 
@@ -15,7 +17,10 @@
 <th>Name</th>
 <th>Plant date</th>
 <th>Coral status</th>
-<th>Reef</th>
+<th>Location</th>
+<th>Edit</th>
+<th>Remove Coral</th>
+
 </tr>
 <% @corals.each do |coral| %>
 <tr>
