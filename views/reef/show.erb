@@ -1,4 +1,19 @@
-<% for coral in @corals %>
-<%= coral.name%>
-<br>
+<h1> Corals in Location </h1>
+
+<table>
+  <tr>
+    <th>Species</th>
+    <th>Name</th>
+    <th>Plantdate</th>
+    <th>Status</th>
+  </tr>
+  <% for coral in @corals %>
+  <tr>
+  <td><%= coral.species%></td>
+  <td><%= coral.name%></td>
+  <td><%= coral.plant_date%></td>
+  <td><%= coral.status%></td>
+</tr>
+
 <% end %>
+</table>

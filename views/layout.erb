@@ -3,32 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>MONTI</title>
-<link rel="stylesheet" type="text/css" href="/styles/structure.css">
-<link rel="stylesheet" type="text/css" href="/styles/buttons.css">
-<link rel="stylesheet" type="text/css" href="/styles/tables.css">
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="/styles/tables.css">
 </head>
 <body>
   <nav>
     <ul>
       <li>
-        <a href="/reef"> Coral Farm / Reef </a>
+        <button><a href="/reef"> Coral Farm / Reef </a></button>
       </li>
       <li>
-      <a  href="/coral"> Corals </a>
+        <button><a  href="/coral"> Corals </a></button>
       </li>
       <li>
-      <a  href="/coral/new">Plant a Coral to the Farm</a>
+        <button><a  href="/coral/new">Plant a Coral to the Farm</a></button>
       </li>
       <li>
-      <a  href="/reef/new"> Transfer a Coral to Reef </a>
+        <button><a  href="/reef/new"> Transfer a Coral to Reef </a></button>
       </li>
     </ul>
+    <br>
   </nav>
   <%= yield %>
 </body>
 <footer>
   <ul>
-    <h3> Related news</h3>
+    <h3> Related news </h3>
     <A HREF="http://www.noaanews.noaa.gov/stories2014/20140827_corallisting.html">NOAA NEWS</A>
     <br>
     <A HREF="http://www.chasingcoral.com"> CHASING CORAL DOCUMENTARY </A>
