@@ -24,7 +24,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 30px;
   color: black;
 }
 
@@ -34,6 +34,8 @@ li {
  padding: 50px;
  text-align: center;
 }
+
+ul {margin-top: 5px;}
 
 a{font-family: fantasy;
 font-weight: 700;
@@ -49,12 +51,19 @@ font-weight: 800;}
 
 h2 {font-size: 30px;
 font-family:fantasy;
-font-weight: 700;}
+font-weight: 700;
+margin-bottom: 1px;}
 
 
-h3 {font-size: 20px;
+h3 {font-size: 13px;
 font-family:fantasy;
-font color: black;}
+font color: black;
+margin-top: 1px;
+margin-bottom: 5px; }
+
 
 
 label {color: white;}
+
+div
+{padding-top: 10px,}

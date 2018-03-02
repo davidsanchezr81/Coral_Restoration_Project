@@ -1,4 +1,4 @@
-<h1>Transfer Corals to the Reef</h2>
+<h1>Transfer a Coral to  Reef</h2>
 <form method="post" action="/reef/new">
 
   <label for="species-selection">Coral Species: </label>
@@ -21,7 +21,7 @@
     <option value="Open Brain Coral"> Open Brain Coral </option>
   </select>
 
-  <label for="coral-select">Select a Reef: </label>
+  <label for="coral-select">Select Reef: </label>
   <select id="coral-select"  name="reef_id">
     <% for reef in @reefs %>
       <option value="<%= reef.id %>"> <%= reef.name %> </option>
@@ -31,8 +31,8 @@
   <label for="plant-date">Plant Date: </label>
   <input id="plant-date" type="date" name="plantdate" />
 
-  <label for="status-selection">Select a Coral Status:</label>
-    <select name="status" id="status-selection">
+  <label hidden for="status-selection">Select a Coral Status:</label>
+    <select hidden name="status" id="status-selection">
       <option value="Mature"> Mature </option>
   </select>
 
