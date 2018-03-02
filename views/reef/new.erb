@@ -11,7 +11,7 @@
     <option value="Tracyphyllia Sp."> Tracyphyllia Sp. </option>
   </select>
 
-  <label for="coral-name-selection">Coral Name: ></label>
+  <label for="coral-name-selection">Coral Name: </label>
   <select name="name" id="coral-name-selection">
     <option value="Common Toadstoll Coral"> Common Toadstoll Coral</option>
     <option value="Devil's Hand Coral"> Devil's Hand Coral </option>
@@ -21,20 +21,19 @@
     <option value="Open Brain Coral"> Open Brain Coral </option>
   </select>
 
-  <label for="coral-select">Select a Reef: ></label>
+  <label for="coral-select">Select a Reef: </label>
   <select id="coral-select"  name="reef_id">
     <% for reef in @reefs %>
       <option value="<%= reef.id %>"> <%= reef.name %> </option>
     <% end %>
   </select>
 
-  <label for="plant-date">Plant Date: ></label>
+  <label for="plant-date">Plant Date: </label>
   <input id="plant-date" type="date" name="plantdate" />
 
   <label for="status-selection">Select a Coral Status:</label>
     <select name="status" id="status-selection">
-      <option value="Mature"> Mature Size ( 20cm tall) </option>
-      <option value="midlle"> Middle Size (10cm tall) </option>
+      <option value="Mature"> Mature </option>
   </select>
 
   <input type="submit"  value="Transfer coral"/>

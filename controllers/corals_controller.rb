@@ -25,15 +25,12 @@ get '/coral/status/:status' do
   erb :"coral/status"
 end
 
-#------------------------ not working the update
+
 get '/coral/:id' do
   @coral = Coral.find( params['id'] )
   erb :"coral/edit"
 end
 
-
-
-##### --------- done -----
 post '/coral/:id' do # updating corals information
   Coral.new( params ).update
   redirect to '/coral'

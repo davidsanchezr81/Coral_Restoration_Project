@@ -11,7 +11,7 @@
     <option value="Tracyphyllia Sp."> Tracyphyllia Sp. </option>
   </select>
 
-  <label for="coral-name-selection">Coral Name: ></label>
+  <label for="coral-name-selection">Coral Name: </label>
   <select name="name" id="coral-name-selection">
     <option value="Common Toadstoll Coral"> Common Toadstoll Coral</option>
     <option value="Devil's Hand Coral"> Devil's Hand Coral </option>
@@ -22,14 +22,14 @@
   </select>
 
 
-  <label hidden for="coral-select">Select a Reef: ></label>
+  <label hidden for="coral-select">Select a Reef: </label>
   <select hidden id="coral-select"  name="reef_id">
     <% for reef in @reefs %>
       <option value="<%= reef.id %>" <%= "selected" if reef.name == "Coral Farm" %>> <%= reef.name %> </option>
     <% end %>
   </select>
 
-  <label for="plant-date">Plant Date: ></label>
+  <label for="plant-date">Plant Date: </label>
   <input id="plant-date" type="date" name="plantdate" />
 
   <label hidden for="status-selection">Select a Coral Status:</label>
